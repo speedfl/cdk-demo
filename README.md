@@ -12,7 +12,7 @@ However it can be very scary as it changes the paradigm, from a fully manual pro
 
 > Why couldn't I code my infrastructure in my preferred language ?
 
-[AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) (AWS Cloud Development Kit) proposesa new approach for infrastructure as code. The goal is to provide to developers librairies in their preferred language to deploy their infrastructure.
+[AWS CDK](https://docs.aws.amazon.com/cdk/latest/guide/home.html) (AWS Cloud Development Kit) proposes a new approach for infrastructure as code. The goal is to provide to developers libraries in their preferred language to deploy their infrastructure.
 
 Let's take an example of an instance `t2.micro` with typescript language:
 
