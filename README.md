@@ -8,7 +8,7 @@ Infrastructure as Code became key enabler for companies that need:
 - Automated disaster recovery 
 - Infrastructure audit
 
-However it can ve very scary as it changes the paradigm, from a fully manual process to an entire automated one. In addition the learning curve on new language such as as HCL (for Terraform) can be a blocker. We can as well talk about lack of unit testing (even if it is feasible it is not always simple).
+However it can be very scary as it changes the paradigm, from a fully manual process to an entire automated one. In addition the learning curve on new language such as as HCL (for Terraform) can be a blocker. We can as well talk about lack of unit testing (even if it is feasible it is not always simple).
 
 > Why couldn't I code my infrastructure in my preferred language ?
 
@@ -36,13 +36,13 @@ Our project will be a Todo list.
 We will deploy:
 
 - An [Ionic](https://ionicframework.com/) frontend (based on Angular)
-- Typescript [Lambda](https://aws.amazon.com/fr/lambda/) functions for backend
+- Typescript [AWS Lambda](https://aws.amazon.com/fr/lambda/) functions for backend
 - An [AWS DynamoDB](https://aws.amazon.com/fr/dynamodb/) for data retention
 - An [AWS SNS](https://aws.amazon.com/fr/sns/) topic for task deletion notification
 
 You will see the following notion:
 
-- [Route 53](https://aws.amazon.com/fr/route53/) for domain
+- [Route 53](https://aws.amazon.com/fr/route53/) for domain names
 - [S3](https://aws.amazon.com/fr/s3/) / [Cloudfront](https://aws.amazon.com/fr/cloudfront/) for Frontend
 - [Lambda](https://aws.amazon.com/fr/lambda/) functions / [APIGateway](https://aws.amazon.com/fr/api-gateway/) v2 for backend
 - [DynamoDB](https://aws.amazon.com/fr/dynamodb/) for data retention
@@ -53,7 +53,7 @@ As all my article are supposed to be production we need to consider following po
 
 Security:
 
-- Add encryption in transift with [AWS Certificate manager](https://aws.amazon.com/fr/certificate-manager/)
+- Add encryption in transit with [AWS Certificate manager](https://aws.amazon.com/fr/certificate-manager/)
 - Add encryption at rest using [AWS KMS](https://aws.amazon.com/fr/kms/) on bucket and DynamoDB
 - Use dedicated [execution roles](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) per functions to access to DynamoDB (Read, ReadWrite) / publish to SNS topics
 - Add [CORS](https://developer.mozilla.org/fr/docs/Web/HTTP/CORS) on apigateway
@@ -64,7 +64,7 @@ Availability:
 - Lambda functions are serverless so highly available
 - DynamoDB is an highly available database
 - Have generic stack to deploy easily in multi region
-- Add a Geo restriction to France 
+- Add a Geo restriction to your region 
 
 Cost optimization:
 
@@ -708,7 +708,7 @@ Now our frontend is ready we can go through the deployment
 
 In this section we will proceed to the deployment of your application with AWS CDK.
 
-### Preriquisites
+### Prerequisites
 
 Before starting you need to install AWS CDK:
 
