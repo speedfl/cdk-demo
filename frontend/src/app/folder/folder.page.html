@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div id="todo-header" *ngIf="!newNote">
+      <ion-button (click)="addNote()" class="m-3">Add note</ion-button>
+    </div>
+
+    <div id="add-note" *ngIf="newNote">
+      <ion-card class="todo">
+        <ion-card-content>
+          <form [formGroup]="newNote">
+            <ion-list>
+              <ion-item mode="md">
+                <ion-label position="floating">Title</ion-label>
+                <ion-input type="text" formControlName="title" required></ion-input>
+              </ion-item>
+              <ion-item mode="md">
+                <ion-label position="floating">Message</ion-label>
+                <ion-input type="text" formControlName="message" required></ion-input>
+              </ion-item>
+            </ion-list>
+            <ion-button (click)="newNote = null" class="m-3">Cancel</ion-button>
+            <ion-button (click)="saveNote()" [disabled]="!newNote.valid" class="m-3">Save</ion-button>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-card *ngFor="let todo of todoList" class="todo">
+      <ion-card-header>
+        <ion-card-subtitle>{{ todo.title }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div style="width: 100%; margin-bottom: 10px;">
+          {{ todo.message }}
+        </div>
+        <ion-button (click)="deleteNote(todo.id)">
+          <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+</ion-content>

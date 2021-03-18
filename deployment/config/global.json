@@ -1,0 +1,7 @@
+{
+    "accountId" : "123456789012",
+    "appName" : "cdk-demo-speedflyer",
+    "email": "my@email.com",
+    "domainHostedZoneId" : "AAAAAAAAAAAAAAAAAAAAA",
+    "domainHostedZoneName" : "my-domain.com"
+}

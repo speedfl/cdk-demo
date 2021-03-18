@@ -1,0 +1,25 @@
+{
+  "name": "cdk-demo-backend",
+  "version": "1.0.0",
+  "description": "The CDK demo backend",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "function:deploy": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.72",
+    "@types/node": "^10.17.0",
+    "@types/uuid": "7.0.3",
+    "aws-sdk": "2.865.0",
+    "eslint": "^6.6.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "~3.8.3",
+    "webpack": "^4.29.0"
+  },
+  "author": "Geoffrey Muselli",
+  "license": "ISC"
+}

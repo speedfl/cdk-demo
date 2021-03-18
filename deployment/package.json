@@ -1,0 +1,46 @@
+{
+  "name": "cdk-demo-deployment",
+  "version": "1.0.0",
+  "description": "Deploy cdk-demo infrastructure using CDK",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf lib && tsc",
+    "watch": "tsc -w",
+    "install:all": "rm -rf node_modules && npm i",
+    "stack:prepare": "npm run install:all && npm run build",
+    "stack:deploy": "./lifecycle/deploy.sh",
+    "stack:undeploy": "./lifecycle/undeploy.sh",
+    "update-site:frontend": "./lifecycle/update/update-site-frontend.sh",
+    "update-site:backend": "./lifecycle/update/update-site-backend.sh"
+  },
+  "author": {
+    "name": "gmuselli"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@aws-cdk/core": "~1.93.0",
+    "@aws-cdk/aws-certificatemanager": "~1.93.0",
+    "@aws-cdk/aws-route53": "~1.93.0",
+    "@aws-cdk/aws-route53-targets": "~1.93.0",
+    "@aws-cdk/aws-s3": "~1.93.0",
+    "@aws-cdk/aws-cloudfront": "~1.93.0",
+    "@aws-cdk/aws-s3-deployment": "~1.93.0",
+    "@aws-cdk/aws-apigatewayv2": "~1.93.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "~1.93.0",
+    "@aws-cdk/aws-dynamodb": "~1.93.0",
+    "@aws-cdk/aws-logs": "~1.93.0",
+    "@aws-cdk/aws-lambda": "~1.93.0",
+    "@aws-cdk/aws-kms": "~1.93.0",
+    "@aws-cdk/aws-iam": "~1.93.0",
+    "@aws-cdk/aws-sns": "~1.93.0",
+    "@aws-cdk/aws-sns-subscriptions": "~1.93.0",
+    "@types/node": "^10.17.0",
+    "eslint": "^6.6.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "~3.8.3",
+    "webpack": "^4.29.0"
+  },
+  "dependencies": {}
+}

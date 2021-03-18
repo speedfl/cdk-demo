@@ -1,0 +1,80 @@
+#Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+
+# Misc
+.idea
+.ionic
+.sass-cache
+.sourcemaps
+.versions
+.vscode
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# IntelliJ
+.idea
+*.ipr
+*.iml
+*.iws
+
+# NetBeans
+nb-configuration.xml
+
+# Visual Studio Code
+.vscode
+.factorypath
+
+# OSX
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+
+# patch
+*.orig
+*.rej
+
+# Local environment
+.env
+
+# Nodejs
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
+log.txt
+npm-debug.log*
+
+cdk-demo-frontend/coverage
+cdk-demo-frontend/platforms
+cdk-demo-frontend/plugins
+
+# Node JS
+**/node_modules/
+**/cdk.out/
+**/lib/
+**/index.js
+**/dist
+**/www/
+**/bundle/
+
+# dump
+*.gz

@@ -1,0 +1,8 @@
+[
+    {
+        "id": "fr",
+        "awsRegion": "eu-west-3",
+        "domain": "fr.my-site.com",
+        "geoRestrictions": [ "FR" ]
+    }
+]
