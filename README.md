@@ -939,7 +939,7 @@ Let's create the frontend certificate to enforce HTTPS. We will use as domain:
 - `www.${region.domain}`
 - `${region.domain}`
 
-> The certificate must ne created on `us-east-1` for cloudfront distribution
+> The certificate must be created on `us-east-1` for cloudfront distribution
 
 ```typescript
 const frontendCertificate = new acm.DnsValidatedCertificate(this, `FrontendCertificate`, {
